@@ -4,6 +4,9 @@ import styles from "/src/assets/styles/Rekening.module.css";
 import GoNextBack from "../components/GoNextBack";
 
 export default function Rekening({ firstPage, addRekening }) {
+  const handleBack = (e) => {
+    navigate(-1);
+  };
   return (
     <>
       <div className={styles.container}>
@@ -23,7 +26,7 @@ export default function Rekening({ firstPage, addRekening }) {
             yang kamu undang.
           </p>
           <RekeningForm addRekening={addRekening} />
-          <GoNextBack firstPage={firstPage} />
+          <GoNextBack firstPage={firstPage} onBack={handleBack}/>
         </div>
       </div>
     </>

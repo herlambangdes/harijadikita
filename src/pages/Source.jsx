@@ -4,6 +4,9 @@ import styles from "/src/assets/styles/JumlahTamu.module.css";
 import GoNextBack from "../components/GoNextBack";
 
 export default function Source({ firstPage }) {
+  const handleBack = (e) => {
+    navigate(-1);
+  };
   return (
     <>
       <div className={styles.container}>
@@ -19,7 +22,7 @@ export default function Source({ firstPage }) {
         <div className={styles.form}>
           <h1 className={styles.title}>Tahu harijadikita dari mana?</h1>
           <SourceForm />
-          <GoNextBack firstPage={firstPage} />
+          <GoNextBack firstPage={firstPage} onBack={handleBack} />
         </div>
       </div>
     </>

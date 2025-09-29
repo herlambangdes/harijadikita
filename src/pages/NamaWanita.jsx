@@ -14,8 +14,12 @@ export default function NamaWanita({ firstPage }) {
 
   const handleNext = (e) => {
     e.preventDefault();
-    navigate("/keluarga-pria");
+    navigate("/instagram");
   };
+
+  const handleBack = (e) => {
+    navigate(-1);
+  }
 
   return (
     <>
@@ -37,7 +41,7 @@ export default function NamaWanita({ firstPage }) {
             Masukkan nama lengkap dan gelar (jika ada) kamu
           </p>
           <NamaPengantinForm value={namaWanita} onChange={setNamaWanita} />
-          <GoNextBack firstPage={firstPage} onNext={handleNext}/>
+          <GoNextBack firstPage={firstPage} onNext={handleNext} onBack={handleBack}/>
         </div>
       </div>
     </>

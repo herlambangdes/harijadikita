@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router";
 import JadwalForm from "../components/JadwalForm";
 import styles from '/src/assets/styles/Jadwal.module.css'
 import GoNextBack from "../components/GoNextBack";
 
 export default function Jadwal({firstPage, addResepsi}) {
+    
+    const handleBack = (e) => {
+    navigate(-1);
+  };
+
     return (
    <>
    <div className={styles.container}>
@@ -15,7 +21,7 @@ export default function Jadwal({firstPage, addResepsi}) {
         <h1 className={styles.title}> Tanggal dan Waktu Pernikahan</h1>
         <p className={styles.description}>Kamu bisa tambah lebih dari satu tanggal resepsi. Jika tidak ada resepsi, tidak perlu klik tombol 'Tambah resepsi'</p>
     <JadwalForm addResepsi={addResepsi}/>
-    <GoNextBack firstPage={firstPage}/>
+    <GoNextBack firstPage={firstPage} onBack={handleBack}/>
     </div>
     </div>
     </>
