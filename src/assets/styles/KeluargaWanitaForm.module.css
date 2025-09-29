@@ -1,0 +1,57 @@
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input,
+.button {
+  width: 300px;
+  min-height: 48px;
+  border-radius: 4px;
+  border: 1px solid #c4c4c4;
+  font-size: 16px;
+  font-family: var(--secondary-font);
+}
+
+.input {
+  padding-left: 12px;
+  margin-bottom: 16px;
+}
+
+.input::placeholder {
+  padding-left: 12px;
+  font-family: var(--secondary-font);
+  color: #a8a8a8;
+}
+
+.input:focus::placeholder {
+  color: transparent;
+}
+
+.button {
+  background-color: var(--primary-color);
+  border: none;
+  color: white;
+}
+
+.button:hover {
+  cursor: pointer;
+  font-family: var(--secondary-font);
+  background-color: var(--primary-button-background-hover);
+}
+
+.noteOne, .noteTwo {
+  font-family: var(--secondary-font);
+  color: #a8a8a8;
+  font-size: 11px;
+  text-align: left;
+  padding-left: 12px;
+}
+
+.noteOne {
+  margin-bottom: 16px;
+}
+
+.noteTwo {
+  margin-bottom: 14px;
+}

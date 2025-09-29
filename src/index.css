@@ -1,0 +1,42 @@
+/*Styling for global*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary-color: #ff5858;
+  --primary-button-background-hover:#fa6868;
+  --social-background-hover: #f5f5f5;
+  --primary-font: 'Quicksand', sans-serif;
+  --secondary-font: 'Inter', sans-serif;
+}
+
+/*React Select Styling*/
+.custom-select__option {
+  font-family: var(--secondary-font);
+}
+
+.custom-select__single-value {
+  font-family: var(--secondary-font);
+}
+
+.custom-select__indicator-separator {
+  display: none;
+}
+
+.custom-select__control--is-focused {
+  border: 2px solid black !important;
+  box-shadow: none !important;
+}
+
+.custom-select__option--is-selected {
+  background-color: var(--primary-color) !important; /* ganti dengan warna yang kamu mau */
+  color: #fff !important; /* atau warna lain sesuai kebutuhan */
+}
+
+.custom-select__option--is-focused {
+  background-color: #ffeaea !important; /* ganti dengan warna yang kamu mau */
+  color: #333 !important; /* opsional, jika ingin ubah warna teks */
+}
