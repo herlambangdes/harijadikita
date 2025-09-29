@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router";
 import RekeningForm from "../components/RekeningForm";
 import styles from "/src/assets/styles/Rekening.module.css";
 import GoNextBack from "../components/GoNextBack";
 
+
+//Fix state and props
 export default function Rekening({ firstPage, addRekening }) {
+  let navigate = useNavigate();
+
+  const handleNext = (e) => {
+    navigate("/jumlah-tamu");
+  }
+  
   const handleBack = (e) => {
     navigate(-1);
   };
@@ -26,7 +35,7 @@ export default function Rekening({ firstPage, addRekening }) {
             yang kamu undang.
           </p>
           <RekeningForm addRekening={addRekening} />
-          <GoNextBack firstPage={firstPage} onBack={handleBack}/>
+          <GoNextBack firstPage={firstPage} onNext={handleNext} onBack={handleBack} />
         </div>
       </div>
     </>

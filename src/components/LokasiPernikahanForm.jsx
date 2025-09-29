@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "/src/assets/styles/LokasiPernikahanForm.module.css";
 
-//add props
+//fix state and props
 export default function LokasiPernikahanForm({addResepsi}) {
   return (
     <>

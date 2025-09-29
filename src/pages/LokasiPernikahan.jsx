@@ -4,7 +4,15 @@ import LokasiPernikahanForm from "../components/LokasiPernikahanForm";
 import styles from "/src/assets/styles/LokasiPernikahan.module.css";
 import GoNextBack from "../components/GoNextBack";
 
+//fix state
 export default function LokasiPernikahan({ firstPage, addResepsi }) {
+  let navigate = useNavigate();
+
+  const handleNext = (e) => {
+    e.preventDefault();
+    navigate("/rekening");
+  }
+  
   const handleBack = (e) => {
     navigate(-1);
   };
@@ -34,7 +42,7 @@ export default function LokasiPernikahan({ firstPage, addResepsi }) {
             </a>
           </p>
           <LokasiPernikahanForm addResepsi={addResepsi} />
-          <GoNextBack firstPage={firstPage} onBack={handleBack}/>
+          <GoNextBack firstPage={firstPage} onNext={handleNext} onBack={handleBack}/>
         </div>
       </div>
     </>

@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router";
 import SourceForm from "../components/SourceForm";
 import styles from "/src/assets/styles/JumlahTamu.module.css";
 import GoNextBack from "../components/GoNextBack";
 
 export default function Source({ firstPage }) {
+  let navigate = useNavigate();
+
   const handleBack = (e) => {
     navigate(-1);
   };

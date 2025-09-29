@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "/src/assets/styles/RekeningForm.module.css";
 
-//add props
+//Fix state and props and add handle add rekening
 export default function RekeningForm({ addRekening }) {
   return (
     <>

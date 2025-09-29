@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "/src/assets/styles/JadwalForm.module.css";
 
-//add props
-export default function JadwalForm({ addResepsi }) {
+//fix state
+export default function JadwalForm() {
+  
+ const [addResepsi, setAddResepsi] = useState(false);
+
+  const handleAddResepsi = () => {
+    setAddResepsi(true); // ubah state jadi true ketika tombol diklik
+  }
+  
   return (
     <>
       <form>
@@ -37,7 +44,7 @@ export default function JadwalForm({ addResepsi }) {
             className={styles.input}
           />
         )}
-        <button type="button" className={styles.tambahResepsi}>
+        <button type="button" className={styles.tambahResepsi} onClick={handleAddResepsi}>
           Tambah resepsi
         </button>
       </form>

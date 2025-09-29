@@ -4,7 +4,14 @@ import JadwalForm from "../components/JadwalForm";
 import styles from '/src/assets/styles/Jadwal.module.css'
 import GoNextBack from "../components/GoNextBack";
 
-export default function Jadwal({firstPage, addResepsi}) {
+//fix state
+export default function Jadwal({firstPage}) {
+    let navigate = useNavigate();
+    
+    const handleNext = (e) => {
+    e.preventDefault();
+    navigate("/lokasi-pernikahan");
+  }
     
     const handleBack = (e) => {
     navigate(-1);
@@ -20,8 +27,8 @@ export default function Jadwal({firstPage, addResepsi}) {
     <div className={styles.form}>
         <h1 className={styles.title}> Tanggal dan Waktu Pernikahan</h1>
         <p className={styles.description}>Kamu bisa tambah lebih dari satu tanggal resepsi. Jika tidak ada resepsi, tidak perlu klik tombol 'Tambah resepsi'</p>
-    <JadwalForm addResepsi={addResepsi}/>
-    <GoNextBack firstPage={firstPage} onBack={handleBack}/>
+    <JadwalForm/>
+    <GoNextBack firstPage={firstPage} onNext={handleNext} onBack={handleBack}/>
     </div>
     </div>
     </>
