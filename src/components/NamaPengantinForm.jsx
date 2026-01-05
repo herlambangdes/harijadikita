@@ -8,20 +8,20 @@ export default function NamaPengantinForm({ value, onChange }) {
       <form>
         <input
           type="text"
-          name="nama-lengkap-pengantin"
+          name="namaLengkap"
           placeholder="Nama lengkap dan gelar (jika ada)"
           className={styles.input}
           value={value.namaLengkap}
-          onChange={(e) => onChange({ ...value, namaLengkap: e.target.value })}
+          onChange={onChange}
         />
 
         <input
           type="text"
-          name="nama-panggilan-pengantin"
+          name="namaPanggilan"
           placeholder="Nama panggilan"
           className={`${styles.input} ${styles.panggilan}`}
           value={value.namaPanggilan}
-          onChange={(e) => onChange({ ...value, namaPanggilan: e.target.value })}
+          onChange={onChange}
         />
       </form>
     </>

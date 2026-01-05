@@ -14,6 +14,11 @@ export default function KeluargaWanita({ firstPage }) {
     jumlahSaudaraWanita: "",
   });
 
+  const handleChange = ({target}) => {
+    const { name, value } = target;
+    setKeluargaWanita((prevState) => ({ ...prevState, [name]: value }));
+  }
+
   const handleNext = (e) => {
     e.preventDefault();
     navigate("/jadwal");
@@ -44,7 +49,7 @@ export default function KeluargaWanita({ firstPage }) {
           </p>
           <KeluargaWanitaForm
             value={keluargaWanita}
-            onChange={setKeluargaWanita}
+            onChange={handleChange}
           />
           <GoNextBack firstPage={firstPage} onNext={handleNext} onBack={handleBack}/>
         </div>

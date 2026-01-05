@@ -8,37 +8,37 @@ export default function KeluargaPriaForm({ value, onChange }) {
       <form>
         <input
           type="text"
-          name="nama-ayah"
+          name="namaAyah"
           placeholder="Nama ayah/wali"
           className={styles.input}
           value={value.namaAyah}
-          onChange={(e) => onChange({...value, namaAyah: e.target.value})}
+          onChange={onChange}
         />
 
         <input
           type="text"
-          name="nama-ibu"
+          name="namaIbu"
           placeholder="Nama ibu/wali"
           className={styles.input}
           value={value.namaIbu}
-          onChange={(e) => onChange({...value, namaIbu: e.target.value})}
+          onChange={onChange}
         />
-         <input
+        <input
           type="text"
-          name="posisi-wanita-dalam-keluarga"
+          name="posisiWanitaDalamKeluarga"
           placeholder="Pengantin wanita anak ke berapa"
           className={styles.input}
           value={value.posisiWanitaDalamKeluarga}
-          onChange={(e) => onChange({...value, posisiWanitaDalamKeluarga: e.target.value})}
+          onChange={onChange}
         />
         <p className={styles.noteOne}>Contoh: pertama</p>
-         <input
+        <input
           type="text"
-          name="jumlah-saudara-wanita"
+          name="jumlahSaudaraWanita"
           placeholder="Jumlah saudara pengantin wanita"
           className={styles.input}
           value={value.jumlahSaudaraWanita}
-          onChange={(e) => onChange({...value, jumlahSaudaraWanita: e.target.value})}
+          onChange={onChange}
         />
         <p className={styles.noteTwo}>Contoh: dua</p>
       </form>

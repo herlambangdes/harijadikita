@@ -14,7 +14,7 @@ const options = [
   { value: "teman", label: "Teman" },
 ];
 //add props
-export default function SourceForm() {
+export default function SourceForm({value, onChange}) {
   return (
     <>
       <form>
@@ -24,6 +24,7 @@ export default function SourceForm() {
           classNamePrefix="custom-select"
           placeholder="Pilih"
           defaultValue={options[0]}
+          onChange={onChange}
         />
       </form>
 

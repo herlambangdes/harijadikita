@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "/src/assets/styles/JadwalForm.module.css";
 
-//fix state
+//fix state and add react datepicker library
 export default function JadwalForm() {
   
  const [addResepsi, setAddResepsi] = useState(false);

@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "/src/assets/styles/LokasiPernikahanForm.module.css";
 
-//fix state and props
+//fix state, props, and integrate with openstreetmap api
 export default function LokasiPernikahanForm({addResepsi}) {
   return (
     <>

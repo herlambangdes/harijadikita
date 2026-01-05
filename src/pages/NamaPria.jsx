@@ -5,12 +5,17 @@ import styles from "/src/assets/styles/NamaPria.module.css";
 import GoNextBack from "../components/GoNextBack";
 
 export default function NamaPria({ firstPage }) {
-  let navigate = useNavigate();
+  const navigate = useNavigate();
 
   const [namaPria, setNamaPria] = useState({
     namaLengkap: "",
     namaPanggilan: "",
   });
+
+  const handleChange = ({target}) => {
+    const { name, value } = target;
+    setNamaPria((prevState) => ({ ...prevState, [name]: value }));
+  }
 
   const handleNext = (e) => {
     e.preventDefault();
@@ -36,7 +41,7 @@ export default function NamaPria({ firstPage }) {
           <p className={styles.description}>
             Masukkan nama lengkap dan gelar (jika ada) kamu
           </p>
-          <NamaPengantinForm value={namaPria} onChange={setNamaPria} />
+          <NamaPengantinForm value={namaPria} onChange={handleChange} />
           <GoNextBack firstPage={firstPage} onNext={handleNext} />
         </div>
       </div>

@@ -12,6 +12,11 @@ export default function NamaWanita({ firstPage }) {
     namaPanggilan: "",
   });
 
+  const handleChange = ({target}) => {
+    const { name, value } = target;
+    setNamaWanita((prevState) => ({ ...prevState, [name]: value }));
+  }
+
   const handleNext = (e) => {
     e.preventDefault();
     navigate("/instagram");
@@ -40,7 +45,7 @@ export default function NamaWanita({ firstPage }) {
           <p className={styles.description}>
             Masukkan nama lengkap dan gelar (jika ada) kamu
           </p>
-          <NamaPengantinForm value={namaWanita} onChange={setNamaWanita} />
+          <NamaPengantinForm value={namaWanita} onChange={handleChange} />
           <GoNextBack firstPage={firstPage} onNext={handleNext} onBack={handleBack}/>
         </div>
       </div>

@@ -2,6 +2,8 @@ import React from "react";
 import { useNavigate } from "react-router";
 import styles from "/src/assets/styles/RegistrationForm.module.css";
 
+
+//fix state
 export default function RegistrationForm({ isRegistered }) {
   let navigate = useNavigate();
   const handleSubmit = (e) => {

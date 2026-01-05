@@ -9,8 +9,13 @@ export default function Instagram({ firstPage }) {
 
   const [instagram, setInstagram] = useState({
     instagramPria: "",
-    instagramWanita: ""
+    instagramWanita: "",
   });
+
+  const handleChange = ({ target }) => {
+    const { name, value } = target;
+    setInstagram((prevState) => ({ ...prevState, [name]: value }));
+  };
 
   const handleNext = (e) => {
     e.preventDefault();
@@ -19,7 +24,7 @@ export default function Instagram({ firstPage }) {
 
   const handleBack = (e) => {
     navigate(-1);
-  }
+  };
 
   return (
     <>
@@ -39,8 +44,12 @@ export default function Instagram({ firstPage }) {
             Masukkan username instagram pengantin untuk ditampilkan di undangan,
             kosongkan jika pengantin tidak memiliki akun instagram.
           </p>
-          <InstagramForm value={instagram} onChange={setInstagram}/>
-          <GoNextBack firstPage={firstPage} onNext={handleNext} onBack={handleBack}/>
+          <InstagramForm value={instagram} onChange={handleChange} />
+          <GoNextBack
+            firstPage={firstPage}
+            onNext={handleNext}
+            onBack={handleBack}
+          />
         </div>
       </div>
     </>

@@ -4,6 +4,7 @@ import JumlahTamuForm from "../components/JumlahTamuForm";
 import styles from "/src/assets/styles/JumlahTamu.module.css";
 import GoNextBack from "../components/GoNextBack";
 
+//Fix state
 export default function JumlahTamu({ firstPage }) {
   let navigate = useNavigate();
 

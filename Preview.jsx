@@ -28,7 +28,7 @@ import JumlahTamu from './src/pages/JumlahTamu';
 import Source from './src/pages/Source';
 
 export default function Preview() {
-  return <Home />;
+  //return <Home />;
   //return  <Registration isRegistered={false}/>
   //return <NamaPria firstPage={true}/>;
   //return <NamaWanita firstPage={false}/>;

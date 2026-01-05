@@ -11,8 +11,8 @@ export default function LokasiPernikahan({ firstPage, addResepsi }) {
   const handleNext = (e) => {
     e.preventDefault();
     navigate("/rekening");
-  }
-  
+  };
+
   const handleBack = (e) => {
     navigate(-1);
   };
@@ -42,7 +42,11 @@ export default function LokasiPernikahan({ firstPage, addResepsi }) {
             </a>
           </p>
           <LokasiPernikahanForm addResepsi={addResepsi} />
-          <GoNextBack firstPage={firstPage} onNext={handleNext} onBack={handleBack}/>
+          <GoNextBack
+            firstPage={firstPage}
+            onNext={handleNext}
+            onBack={handleBack}
+          />
         </div>
       </div>
     </>
