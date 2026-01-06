@@ -14,7 +14,7 @@ export default function KeluargaPria({ firstPage }) {
     jumlahSaudaraPria: "",
   });
 
-  const handleChange = ({target}) => {
+  const handleChange = ({ target }) => {
     const { name, value } = target;
     setKeluargaPria((prevState) => ({ ...prevState, [name]: value }));
   }
@@ -47,8 +47,8 @@ export default function KeluargaPria({ firstPage }) {
           <p className={styles.description}>
             Masukkan profil keluarga pengantin pria.
           </p>
-          <KeluargaPriaForm value={keluargaPria} onChange={handleChange}/>
-          <GoNextBack firstPage={firstPage} onNext={handleNext} onBack={handleBack}/>
+          <KeluargaPriaForm value={keluargaPria} onChange={handleChange} />
+          <GoNextBack firstPage={firstPage} onNext={handleNext} onBack={handleBack} currentStep={4} />
         </div>
       </div>
     </>

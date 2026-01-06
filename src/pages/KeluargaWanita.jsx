@@ -14,7 +14,7 @@ export default function KeluargaWanita({ firstPage }) {
     jumlahSaudaraWanita: "",
   });
 
-  const handleChange = ({target}) => {
+  const handleChange = ({ target }) => {
     const { name, value } = target;
     setKeluargaWanita((prevState) => ({ ...prevState, [name]: value }));
   }
@@ -51,7 +51,7 @@ export default function KeluargaWanita({ firstPage }) {
             value={keluargaWanita}
             onChange={handleChange}
           />
-          <GoNextBack firstPage={firstPage} onNext={handleNext} onBack={handleBack}/>
+          <GoNextBack firstPage={firstPage} onNext={handleNext} onBack={handleBack} currentStep={5} />
         </div>
       </div>
     </>

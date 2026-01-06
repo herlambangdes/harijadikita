@@ -55,6 +55,7 @@ export default function Rekening({ firstPage, addRekening }) {
             firstPage={firstPage}
             onNext={handleNext}
             onBack={handleBack}
+            currentStep={8}
           />
         </div>
       </div>

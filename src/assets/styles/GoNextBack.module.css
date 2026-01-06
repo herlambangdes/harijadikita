@@ -36,3 +36,33 @@
 .backButton:hover {
   background-color: #cbcbcb;
 }
+
+.stepperContainer {
+  margin-top: 24px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.progressBar {
+  width: 100%;
+  height: 8px;
+  background-color: #E0E0E0;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background-color: #FF5252;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.stepText {
+  font-family: var(--secondary-font);
+  font-size: 0.875rem;
+  color: #474747;
+}

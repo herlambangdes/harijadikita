@@ -10,7 +10,7 @@ export default function Source({ firstPage }) {
 
   const [source, setSource] = useState("");
 
-  const handleChange = ({target}) => {
+  const handleChange = ({ target }) => {
     setSource(target.value);
   }
 
@@ -31,8 +31,8 @@ export default function Source({ firstPage }) {
         </header>
         <div className={styles.form}>
           <h1 className={styles.title}>Tahu harijadikita dari mana?</h1>
-          <SourceForm value={source} onChange={handleChange}/>
-          <GoNextBack firstPage={firstPage} onBack={handleBack} />
+          <SourceForm value={source} onChange={handleChange} />
+          <GoNextBack firstPage={firstPage} onBack={handleBack} currentStep={10} />
         </div>
       </div>
     </>

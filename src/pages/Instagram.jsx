@@ -49,6 +49,7 @@ export default function Instagram({ firstPage }) {
             firstPage={firstPage}
             onNext={handleNext}
             onBack={handleBack}
+            currentStep={3}
           />
         </div>
       </div>

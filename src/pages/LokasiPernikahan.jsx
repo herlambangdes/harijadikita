@@ -46,6 +46,7 @@ export default function LokasiPernikahan({ firstPage, addResepsi }) {
             firstPage={firstPage}
             onNext={handleNext}
             onBack={handleBack}
+            currentStep={7}
           />
         </div>
       </div>

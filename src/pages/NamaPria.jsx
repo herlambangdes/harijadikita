@@ -12,7 +12,7 @@ export default function NamaPria({ firstPage }) {
     namaPanggilan: "",
   });
 
-  const handleChange = ({target}) => {
+  const handleChange = ({ target }) => {
     const { name, value } = target;
     setNamaPria((prevState) => ({ ...prevState, [name]: value }));
   }
@@ -42,7 +42,7 @@ export default function NamaPria({ firstPage }) {
             Masukkan nama lengkap dan gelar (jika ada) kamu
           </p>
           <NamaPengantinForm value={namaPria} onChange={handleChange} />
-          <GoNextBack firstPage={firstPage} onNext={handleNext} />
+          <GoNextBack firstPage={firstPage} onNext={handleNext} currentStep={1} />
         </div>
       </div>
     </>

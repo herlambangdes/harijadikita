@@ -12,7 +12,7 @@ export default function NamaWanita({ firstPage }) {
     namaPanggilan: "",
   });
 
-  const handleChange = ({target}) => {
+  const handleChange = ({ target }) => {
     const { name, value } = target;
     setNamaWanita((prevState) => ({ ...prevState, [name]: value }));
   }
@@ -46,7 +46,7 @@ export default function NamaWanita({ firstPage }) {
             Masukkan nama lengkap dan gelar (jika ada) kamu
           </p>
           <NamaPengantinForm value={namaWanita} onChange={handleChange} />
-          <GoNextBack firstPage={firstPage} onNext={handleNext} onBack={handleBack}/>
+          <GoNextBack firstPage={firstPage} onNext={handleNext} onBack={handleBack} currentStep={2} />
         </div>
       </div>
     </>

@@ -33,7 +33,7 @@ export default function JumlahTamu({ firstPage }) {
             Masukkan estimasi jumlah tamu yang akan diundang.{" "}
           </p>
           <JumlahTamuForm />
-          <GoNextBack firstPage={firstPage} onNext={handleNext} onBack={handleBack} />
+          <GoNextBack firstPage={firstPage} onNext={handleNext} onBack={handleBack} currentStep={9} />
         </div>
       </div>
     </>
